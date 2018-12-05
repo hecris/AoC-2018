@@ -33,7 +33,9 @@ def react(content):
     return res
 
 res = react(content)
+
 print('Answer to part1:', len(res))
+
 c = list(res)
 u = set(c)
 lens = []
@@ -41,6 +43,7 @@ for letter in u:
     copy = res
     copy = copy.replace(letter, '').replace(letter.upper(), '')
     lens.append(len(react(copy)))
+    
 print('Answer to part2', min(lens))
 
 
