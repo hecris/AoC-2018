@@ -43,10 +43,10 @@ for letter in u:
     copy = res
     copy = copy.replace(letter, '').replace(letter.upper(), '')
     lens.append(len(react(copy)))
-    
-print('Answer to part2', min(lens))
+
+print('Answer to part2', min(lens)-1)
 
 
 
 
-    
+
