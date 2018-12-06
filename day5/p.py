@@ -26,15 +26,15 @@ def react(content):
                     c[i] = '#'
                     c[i + 1] = '#'
                     diff += 1
-   
-                
+
+
         res = ''.join(c)
-        
+
     return res
 
 res = react(content)
 
-print('Answer to part1:', len(res))
+print('Answer to part1:', len(res) - 1)
 
 c = list(res)
 u = set(c)
