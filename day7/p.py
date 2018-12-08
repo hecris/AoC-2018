@@ -35,14 +35,13 @@ def part1():
 
     d = make_dict(l)
     possible_heads = []
+
     for v in d.values():
         for n in v:
             if n not in d.keys() and n not in possible_heads:
                 possible_heads.append(n)
-
     for p in possible_heads:
         d[p] = []
-
     head = alpha(possible_heads)
     path = []
 
@@ -60,12 +59,12 @@ def part1():
                 possible.append(k)
         if len(possible) == 0:
             break
-        
+        #print(possible)
         nex = alpha(possible)
         del d[nex]
         head = nex
 
+    return ''.join(path)
 
-    print(''.join(path))
-
-part1()
+answer = part1()
+print('Answer to part1:', answer)
